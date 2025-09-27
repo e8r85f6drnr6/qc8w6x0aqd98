@@ -88,6 +88,7 @@ export async function POST(request: NextRequest) {
         customPrice: calculateCustomPrice(selectedSubjects.length).toString(),
         subjectCount: selectedSubjects.length.toString(),
       },
+      allow_promotion_codes: true,
     });
 
     return NextResponse.json({
